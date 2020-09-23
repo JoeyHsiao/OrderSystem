@@ -24,10 +24,12 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="loginAccount" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                 Width="300"/>
+                 Width="300"
+                 FontSize="15" VerticalContentAlignment="Center"/>
         
         <PasswordBox x:Name="loginPassword" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
-                     Width="300"/>
+                     Width="300"
+                     FontSize="15" VerticalContentAlignment="Center"/>
 
         <Button x:Name="loginBtn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
                 Width="280" Height="25"
