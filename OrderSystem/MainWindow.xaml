@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="380" Width="400" ResizeMode="NoResize">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="195"/>
+            <ColumnDefinition Width="195"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="loginAccount" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                 Width="300"/>
+        
+        <PasswordBox x:Name="loginPassword" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                     Width="300"/>
+
+        <Button x:Name="loginBtn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+                Width="280" Height="25"
+                Content="Login"
+                Click="LoginBtnClick"/>
+
+        <Button x:Name="forgetBtn" Grid.Row="4" Grid.Column="1"
+                Width="130" Height="25" Margin="55,10,10,10"
+                Content="Forget Password"
+                Click="ForgetBtnClick"/>
+
+        <Button x:Name="registerBtn" Grid.Row="4" Grid.Column="2"
+                Width="130" Height="25" Margin="10,10,55,10"
+                Content="Register Account"
+                Click="RegisterBtnClick"/>
         
     </Grid>
 </Window>

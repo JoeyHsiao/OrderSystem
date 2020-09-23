@@ -24,5 +24,20 @@ namespace OrderSystem
         {
             InitializeComponent();
         }
+
+        private void LoginBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ForgetBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegisterBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
