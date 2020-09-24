@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OrderSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="380" Width="400" ResizeMode="NoResize">
+        Title="MainWindow" Height="380" Width="400" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -23,26 +24,26 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="loginAccount" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                 Width="300"
+        <TextBox x:Name="loginAccount" Width="300"
+                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
-        
-        <PasswordBox x:Name="loginPassword" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
-                     Width="300"
+
+        <PasswordBox x:Name="loginPassword" Width="300"
+                     Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                      FontSize="15" VerticalContentAlignment="Center"/>
 
-        <Button x:Name="loginBtn" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
-                Width="280" Height="25"
+        <Button x:Name="loginBtn" Width="280" Height="25"
+                Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
                 Content="Login"
                 Click="LoginBtnClick"/>
 
-        <Button x:Name="forgetBtn" Grid.Row="4" Grid.Column="1"
-                Width="130" Height="25" Margin="55,10,10,10"
+        <Button x:Name="forgetBtn" Width="130" Height="25" Margin="55,10,10,10"
+                Grid.Row="4" Grid.Column="1"
                 Content="Forget Password"
                 Click="ForgetBtnClick"/>
 
-        <Button x:Name="registerBtn" Grid.Row="4" Grid.Column="2"
-                Width="130" Height="25" Margin="10,10,55,10"
+        <Button x:Name="registerBtn" Width="130" Height="25" Margin="10,10,55,10"
+                Grid.Row="4" Grid.Column="2"
                 Content="Register Account"
                 Click="RegisterBtnClick"/>
         
