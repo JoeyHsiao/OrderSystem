@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderSystem.RegisterAccount;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,10 @@ namespace OrderSystem
 
         private void RegisterBtnClick(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
+            RegisterAccountWindow a = new RegisterAccountWindow();
+            a.ShowDialog();
+            this.Show();
         }
     }
 }
