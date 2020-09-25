@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderSystem.src;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,14 @@ namespace OrderSystem.RegisterAccount
 
         private void registerAccountBtnClick(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine(registerPassword.Password);
+            if (registerAccount.Text == "" | registerPassword.Password == "" | registerPasswordConfirm.Password == "" | registerEmail.Text == "" )
+                return;
+            else if (registerPassword.Password != registerPasswordConfirm.Password )
+                return;
 
+            AccountProcess account = new AccountProcess();
+            account.Register(registerAccount.Text, registerPassword.Password, registerEmail.Text);
         }
     }
 }
