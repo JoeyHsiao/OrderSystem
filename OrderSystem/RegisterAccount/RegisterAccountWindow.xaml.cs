@@ -29,12 +29,23 @@ namespace OrderSystem.RegisterAccount
         {
             Console.WriteLine(registerPassword.Password);
             if (registerAccount.Text == "" | registerPassword.Password == "" | registerPasswordConfirm.Password == "" | registerEmail.Text == "" )
+            {
+                DialogShow.ShowOkDialog("Have item empty!");
                 return;
+            }
             else if (registerPassword.Password != registerPasswordConfirm.Password )
+            {
+                DialogShow.ShowOkDialog("Password and Confirm Password not same!");
                 return;
+            }
 
             AccountProcess account = new AccountProcess();
-            account.Register(registerAccount.Text, registerPassword.Password, registerEmail.Text);
+            bool result = account.Register(registerAccount.Text, registerPassword.Password, registerEmail.Text);
+            if ( result == false )
+            {
+                DialogShow.ShowOkDialog("Account has already exist!");
+                return;
+            }
         }
     }
 }

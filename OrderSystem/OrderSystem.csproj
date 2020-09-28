@@ -59,6 +59,7 @@
       <DependentUpon>RegisterAccountWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="src\AccountProcess.cs" />
+    <Compile Include="src\DialogShow.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
