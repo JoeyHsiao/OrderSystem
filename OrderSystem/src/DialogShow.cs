@@ -9,10 +9,9 @@ namespace OrderSystem.src
 {
     class DialogShow
     {
-        public static void ShowOkDialog(string message)
+        public static void ShowOkDialog(string title, string message)
         {
-            MessageBox.Show(message, "warning", MessageBoxButton.OK);
-            //MessageBox.Show(noAccountText, caption, button, icon);
+            MessageBox.Show(message, title, MessageBoxButton.OK);
         }
 
     }

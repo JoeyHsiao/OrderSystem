@@ -55,11 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ForgetAccount\ForgetAccountWindow.xaml.cs">
+      <DependentUpon>ForgetAccountWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterAccount\RegisterAccountWindow.xaml.cs">
       <DependentUpon>RegisterAccountWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="src\AccountProcess.cs" />
     <Compile Include="src\DialogShow.cs" />
+    <Page Include="ForgetAccount\ForgetAccountWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -28,5 +28,32 @@ namespace OrderSystem.src
             
             return true;
         }
+
+        public Tuple<string, string> SearchAccount(string account, string email)
+        {
+            if (!File.Exists(UsersAccountPath))
+                return Tuple.Create("", "NOACCOUNT");
+
+            string[] fileLines = System.IO.File.ReadAllLines(UsersAccountPath);
+            string[] fileAttributes = fileLines[0].Split(',');
+            for (int i = 1; i < fileLines.Length; i++)
+            {
+                string[] a = fileLines[i].Split(',');
+                if (account == a[Array.IndexOf(fileAttributes, "Account")] )
+                {
+                    if ( email == a[Array.IndexOf(fileAttributes, "Mail")] )
+                    {
+                        return Tuple.Create(a[Array.IndexOf(fileAttributes, "Password")], "");
+                    }
+                    else
+                    {
+                        return Tuple.Create("", "ERRORMATCH");
+                    }
+
+                }
+            }
+
+            return Tuple.Create("", "NOACCOUNT");
+        }
     }
 }

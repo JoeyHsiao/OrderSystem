@@ -1,4 +1,5 @@
-﻿using OrderSystem.RegisterAccount;
+﻿using OrderSystem.ForgetAccount;
+using OrderSystem.RegisterAccount;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,10 @@ namespace OrderSystem
 
         private void ForgetBtnClick(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
+            ForgetAccountWindow a = new ForgetAccountWindow();
+            a.ShowDialog();
+            this.Show();
         }
 
         private void RegisterBtnClick(object sender, RoutedEventArgs e)

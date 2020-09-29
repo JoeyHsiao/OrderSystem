@@ -1,0 +1,45 @@
+﻿<Window x:Class="OrderSystem.ForgetAccount.ForgetAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrderSystem.ForgetAccount"
+        mc:Ignorable="d"
+        Title="ForgetAccountWindow" Height="400" Width="600" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   Text="Account : " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+        <TextBox x:Name="account" Width="320" Height="30"
+                 Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                 FontSize="15" VerticalContentAlignment="Center"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0"
+                   Text="Email : " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+        <TextBox x:Name="email" Width="320" Height="30"
+                 Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                 FontSize="15" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="forgetBtn" Width="80" Height="35" Margin="280, 5, 40, 5"
+                Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+                Content="Search" FontSize="15"
+                Click="ForgetBtnClick"/>
+    </Grid>
+</Window>
