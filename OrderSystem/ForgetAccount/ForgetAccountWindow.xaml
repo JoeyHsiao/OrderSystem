@@ -26,14 +26,14 @@
         <TextBlock Grid.Row="1" Grid.Column="0"
                    Text="Account : " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
-        <TextBox x:Name="account" Width="320" Height="30"
+        <TextBox x:Name="accountText" Width="320" Height="30"
                  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
         <TextBlock Grid.Row="2" Grid.Column="0"
                    Text="Email : " FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
-        <TextBox x:Name="email" Width="320" Height="30"
+        <TextBox x:Name="emailText" Width="320" Height="30"
                  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 

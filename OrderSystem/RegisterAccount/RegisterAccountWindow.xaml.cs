@@ -25,22 +25,22 @@ namespace OrderSystem.RegisterAccount
             InitializeComponent();
         }
 
-        private void registerAccountBtnClick(object sender, RoutedEventArgs e)
+        private void RegisterAccountBtnClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(registerPassword.Password);
-            if (registerAccount.Text == "" | registerPassword.Password == "" | registerPasswordConfirm.Password == "" | registerEmail.Text == "" )
+            Console.WriteLine(passwordText.Password);
+            if ( accountText.Text == "" | passwordText.Password == "" | passwordConfirmText.Password == "" | emailText.Text == "" )
             {
                 DialogShow.ShowOkDialog("warning", "Have item empty!");
                 return;
             }
-            else if (registerPassword.Password != registerPasswordConfirm.Password )
+            else if ( passwordText.Password != passwordConfirmText.Password )
             {
                 DialogShow.ShowOkDialog("warning", "Password and Confirm Password not same!");
                 return;
             }
 
             AccountProcess account = new AccountProcess();
-            bool result = account.Register(registerAccount.Text, registerPassword.Password, registerEmail.Text);
+            bool result = account.Register(accountText.Text, passwordText.Password, emailText.Text);
             if ( result == false )
             {
                 DialogShow.ShowOkDialog("warning", "Account has already exist!");

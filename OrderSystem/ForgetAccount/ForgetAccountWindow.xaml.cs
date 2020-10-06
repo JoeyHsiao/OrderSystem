@@ -27,14 +27,14 @@ namespace OrderSystem.ForgetAccount
 
         private void ForgetBtnClick(object sender, RoutedEventArgs e)
         {
-            if (account.Text == "" | email.Text == "")
+            if ( accountText.Text == "" | emailText.Text == "" )
             {
                 DialogShow.ShowOkDialog("Warning", "Have item empty!");
                 return;
             }
 
-            AccountProcess a = new AccountProcess();
-            (string password, string errorType) = a.SearchAccount(account.Text, email.Text);
+            AccountProcess account = new AccountProcess();
+            (string password, string errorType) = account.SearchPassword(accountText.Text, emailText.Text);
 
             if ( password != "" )
             {

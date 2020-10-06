@@ -24,11 +24,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="loginAccount" Width="300"
+        <TextBox x:Name="accountText" Width="300"
                  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
-        <PasswordBox x:Name="loginPassword" Width="300"
+        <PasswordBox x:Name="passwordText" Width="300"
                      Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                      FontSize="15" VerticalContentAlignment="Center"/>
 

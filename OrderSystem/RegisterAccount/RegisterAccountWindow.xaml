@@ -28,35 +28,35 @@
         <TextBlock Grid.Row="1" Grid.Column="0"
                    Text="Account : " FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
         
-        <TextBox x:Name="registerAccount" Width="320" Height="30"
+        <TextBox x:Name="accountText" Width="320" Height="30"
                  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
         <TextBlock Grid.Row="2" Grid.Column="0"
                    Text="Password : " FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
-        <PasswordBox x:Name="registerPassword" Width="320" Height="30"
+        <PasswordBox x:Name="passwordText" Width="320" Height="30"
                  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
         <TextBlock Grid.Row="3" Grid.Column="0"
                    Text="Confirm Password : " FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
-        <PasswordBox x:Name="registerPasswordConfirm" Width="320" Height="30"
+        <PasswordBox x:Name="passwordConfirmText" Width="320" Height="30"
                  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
         <TextBlock Grid.Row="4" Grid.Column="0"
                    Text="Email : " FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
-        <TextBox x:Name="registerEmail" Width="320" Height="30"
+        <TextBox x:Name="emailText" Width="320" Height="30"
                  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
                  FontSize="15" VerticalContentAlignment="Center"/>
 
         <Button x:Name="registerAccountBtn" Width="80" Height="35" Margin="5, 5, 15, 5"
                 Grid.Row="5" Grid.Column="2"
                 Content="Register" FontSize="15"
-                Click="registerAccountBtnClick"/>
+                Click="RegisterAccountBtnClick"/>
 
     </Grid>
 </Window>

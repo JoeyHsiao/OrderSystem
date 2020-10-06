@@ -31,13 +31,13 @@ namespace OrderSystem
 
         private void LoginBtnClick(object sender, RoutedEventArgs e)
         {
-            AccountProcess b = new AccountProcess();
-            if ( loginAccount.Text == "" | loginPassword.Password == "" )
+            AccountProcess account = new AccountProcess();
+            if ( accountText.Text == "" | passwordText.Password == "" )
             {
                 DialogShow.ShowOkDialog("warning", "Have item empty!");
                 return;
             }
-            else if ( b.Login(loginAccount.Text, loginPassword.Password) )
+            else if ( account.Login(accountText.Text, passwordText.Password) )
             {
                 this.Hide();
                 OrderWindow a = new OrderWindow();
