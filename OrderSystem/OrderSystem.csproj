@@ -58,6 +58,9 @@
     <Compile Include="ForgetAccount\ForgetAccountWindow.xaml.cs">
       <DependentUpon>ForgetAccountWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Order\OrderWindow.xaml.cs">
+      <DependentUpon>OrderWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterAccount\RegisterAccountWindow.xaml.cs">
       <DependentUpon>RegisterAccountWindow.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Order\OrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegisterAccount\RegisterAccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

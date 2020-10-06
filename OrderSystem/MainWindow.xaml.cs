@@ -1,5 +1,7 @@
 ﻿using OrderSystem.ForgetAccount;
+using OrderSystem.Order;
 using OrderSystem.RegisterAccount;
+using OrderSystem.src;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +31,25 @@ namespace OrderSystem
 
         private void LoginBtnClick(object sender, RoutedEventArgs e)
         {
+            AccountProcess b = new AccountProcess();
+            if ( loginAccount.Text == "" | loginPassword.Password == "" )
+            {
+                DialogShow.ShowOkDialog("warning", "Have item empty!");
+                return;
+            }
+            else if ( b.Login(loginAccount.Text, loginPassword.Password) )
+            {
+                this.Hide();
+                OrderWindow a = new OrderWindow();
+                a.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                DialogShow.ShowOkDialog("Error", "Not match account or password");
+            }
 
+            
         }
 
         private void ForgetBtnClick(object sender, RoutedEventArgs e)

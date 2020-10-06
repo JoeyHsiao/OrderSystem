@@ -10,6 +10,12 @@ namespace OrderSystem.src
     class AccountProcess
     {
         private string UsersAccountPath = @".\Usersinfo.csv";
+        private enum UserAttributes
+        {
+            Account=0,
+            Password=1,
+            Mail=2
+        }
 
         public bool Register(string account, string password, string email)
         {
@@ -29,7 +35,7 @@ namespace OrderSystem.src
             return true;
         }
 
-        public Tuple<string, string> SearchAccount(string account, string email)
+        public Tuple<string, string> SearchPassword(string account, string email)
         {
             if (!File.Exists(UsersAccountPath))
                 return Tuple.Create("", "NOACCOUNT");
@@ -54,6 +60,31 @@ namespace OrderSystem.src
             }
 
             return Tuple.Create("", "NOACCOUNT");
+        }
+
+        public bool Login(string account, string password)
+        {
+            string[] fileLines = System.IO.File.ReadAllLines(UsersAccountPath);
+            int accountIndex = (int)UserAttributes.Account;
+            int passwordIndex = (int)UserAttributes.Password;
+
+            for (int i = 0; i < fileLines.Length; i++)
+            {
+                string[] a = fileLines[i].Split(',');
+                if ( account == a[accountIndex] )
+                {
+                    if ( password == a[passwordIndex] )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            
+            return false;
         }
     }
 }
